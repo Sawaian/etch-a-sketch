@@ -1,6 +1,10 @@
-#pixel{
-    border: block;
-    height: auto;
-    width: auto;
-    background-color: aqua;
+    .pixel{
+ 
+    border-radius: .5rem;
+    margin: 1rem;
+    flex: 1px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(243, 8, 8);
 }
+
