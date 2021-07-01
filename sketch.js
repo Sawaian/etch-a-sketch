@@ -3,7 +3,7 @@
 
 
 let cellCreation = function(){
-for(i = 0; i < 8; ++i){
+for(i = 0; i < 256; ++i){
     let pixl = document.querySelector('#cell');
     let pixel = document.createElement('div');
     pixel.classList.add("pixel");
@@ -14,9 +14,12 @@ for(i = 0; i < 8; ++i){
     // When the for loop executes, it brings in all of this content. 
     //cell is selection, we create element p.
     //Is it possible that it's overwriting itself?
-    console.log("Is it working?");
-}
+
+    // changes color of background.
+
+
+
+    }
 
 }
-
 cellCreation();

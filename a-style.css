@@ -2,13 +2,15 @@
     #cell{
         max-width: 100;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(16, 1fr);
   
     }
     .pixel{
     margin: 10px;
-    height: 200px;
-    width: 200px;
-    background-color: rgb(243, 8, 8);
+    height: 100px;
+    width: 100px;
+    background-color: blue;   
+
+    
 }
 
