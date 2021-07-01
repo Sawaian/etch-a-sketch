@@ -3,7 +3,7 @@
 
 
 let cellCreation = function(){
-for(i = 0; i < 2; ++i){
+for(i = 0; i < 8; ++i){
     let pixl = document.querySelector('#cell');
     let pixel = document.createElement('div');
     pixel.classList.add("pixel");

@@ -1,19 +1,14 @@
     
-    .container{
-        display: flex;
-        flex-direction: row;
-        flex-grow: 4;
+    #cell{
+        max-width: 100;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  
     }
     .pixel{
-
-    flex: 1;
-    border: 2px solid yellow;
-    height: 100px;
-    width: 100px;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
     background-color: rgb(243, 8, 8);
 }
-
-    .pixel:first-child{
-    margin-right: 20px;
-    }
 
