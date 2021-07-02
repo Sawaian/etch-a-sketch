@@ -18,12 +18,19 @@ for(i = 0; i < 256; ++i){
     // changes color of background.
 
 
+
     let divColor = document.getElementById( 'pixel' );
     divColor.onmouseover = function() {
-      this.style.backgroundColor = 'green';
-      let pixelColor = this.getElementsByTagName( 'pixelColor' );
-      pixelColor[0].style.backgroundColor = 'green';
-    };
+      this.style.backgroundColor = 'red';
+     // let pixelColor = this.getElementsByTagName( 'pixelColor' );
+      //pixelColor.style.backgroundColor = 'green';
+    }
+
+    document.addEventListener('onmouseover',function(e){
+        if(e.target && e.target.matches("pixel"){
+              this.style.backgroundColor= 'red';
+         }
+     });
 
 }
 }
