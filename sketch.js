@@ -1,9 +1,5 @@
 
 
-let btn = document.querySelector('#reset');
-    btn.addEventListener('click', ()=> {
-    pixel.style.background = 'white';
-  });
 
 //function reset(){
   //cellCreation();
@@ -24,6 +20,12 @@ for(i = 0; i < 256; ++i){
     pixel.addEventListener('mouseover', function(){
       pixel.style.background = 'pink';
     });
+
+
+let btn = document.querySelector('#reset');
+btn.addEventListener('click', ()=> {
+pixel.style.background = 'white';
+});
 
 }
 }
