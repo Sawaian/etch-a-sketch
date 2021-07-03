@@ -1,11 +1,10 @@
     
     #cell{
         display: grid;
-        grid-template-columns: repeat(16, 1fr);
+        grid-template-columns: repeat(16, 0fr);
   
     }
     .pixel{
-    margin: 10px;
     height: 40px;
     width: 40px;
     background-color: blue;   

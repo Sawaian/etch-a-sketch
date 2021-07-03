@@ -26,7 +26,7 @@ for(i = 0; i < 256; ++i){
       //pixelColor.style.backgroundColor = 'green';
    // }
 
-    pixel.addEventListener('mousemove', function(){
+    pixel.addEventListener('mouseover', function(){
       pixel.style.background = 'pink';
     });
 
