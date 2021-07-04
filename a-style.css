@@ -1,10 +1,5 @@
     
-    #cell{
-        display: grid;
-        width: 960px;
-        grid-template-columns: repeat(16, 0fr);
-  
-    }
+
     .pixel{
         height: 10px;
         width: 10px;

@@ -6,16 +6,18 @@ let etchSize = parseInt(prompt());
 let cellCreation = function(){
 
 let grid = etchSize * etchSize;
+
 for(i = 0; i < grid; ++i){
-    let pixl = document.querySelector('#cell');
+
+    let container = document.querySelector('#container');
     let pixel = document.createElement('div');
     pixel.classList.add("pixel");
     pixel.setAttribute('id', "pixel");
-    pixl.appendChild(pixel);
 
-    cell.style.gridTemplateColumns = 'repeat($(etchSize), 1fr)';
-
-
+    container.style.gridTemplateColumns = `repeat(${etchSize}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${etchSize}, 1fr)`;
+    
+    container.appendChild(pixel);                                                
 
     // changes color of background.
     pixel.addEventListener('mouseover', function(){
@@ -23,11 +25,13 @@ for(i = 0; i < grid; ++i){
     });
 
 
-let btn = document.querySelector('#reset');
-btn.addEventListener('click', ()=> {
-pixel.style.background = 'white';
-});
+      let btn = document.querySelector('#reset');
+      btn.addEventListener('click', ()=> {
+      pixel.style.background = 'white';
+      });
 
-}
+    
+
+    }
 }
 window.addEventListener(onload, cellCreation());
