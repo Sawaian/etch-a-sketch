@@ -1,20 +1,21 @@
 
+let etchSize = parseInt(prompt());
 
-
-//function reset(){
-  //cellCreation();
-
-  //}
 
 
 let cellCreation = function(){
-for(i = 0; i < 256; ++i){
+
+let grid = etchSize * etchSize;
+for(i = 0; i < grid; ++i){
     let pixl = document.querySelector('#cell');
     let pixel = document.createElement('div');
     pixel.classList.add("pixel");
     pixel.setAttribute('id', "pixel");
     pixl.appendChild(pixel);
-    document.getElementById("pixel").textContent = "Test"; 
+
+    cell.style.gridTemplateColumns = 'repeat($(etchSize), 1fr)';
+
+
 
     // changes color of background.
     pixel.addEventListener('mouseover', function(){
