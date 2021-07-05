@@ -10,8 +10,8 @@
     #container {
         display: grid;
         justify-content: stretch;
-        width: 50vw;
-        height: 50vw;
+        width: 35vw;
+        height: 35vw;
         margin: auto;
         border: 1px solid black;
         
