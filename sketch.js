@@ -1,5 +1,5 @@
 
-   const gridSize = 10;
+   const gridSize = prompt();
    let grid = gridSize * gridSize;
    let container = document.querySelector('#container');
 
@@ -17,7 +17,7 @@
 
       let pixel = document.createElement('div');
       pixel.classList.add("pixel");
-      pixel.style.height=(650/gridSize)+"px"
+      //pixel.style.height=(650/gridSize)+"px"
       container.appendChild(pixel);                                                
 
       // changes color of background.

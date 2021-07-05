@@ -3,13 +3,17 @@
   
    
    .pixel{
-
+        justify-self: stretch;
         background-color: blue;
 }
 
     #container {
         display: grid;
         justify-content: stretch;
+        width: 50vw;
+        height: 50vw;
+        margin: auto;
+        border: 1px solid black;
         
     }
 
@@ -18,10 +22,3 @@
         justify-content: center;
     }
 
-
-    #container-limit{
-        width: 650px;
-        height: 650px;
-        margin: auto;
-        border: 1px solid black;
-    }
