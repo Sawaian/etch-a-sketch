@@ -1,32 +1,28 @@
 
-let etchSize = 100;
+   const gridSize = 10;
+   let grid = gridSize * gridSize;
+   let container = document.querySelector('#container');
 
+   
 
+ let divGrid = function() {  
+  for(i = 0; i < grid; ++i){
+      cellCreation();
+     }
+    }
 
+  
 
+  let cellCreation = function(){
 
-let container = document.querySelector('#container');
-container.style.gridTemplateColumns = `repeat(${etchSize}, 1fr)`;
-container.style.gridTemplateRows = `repeat(${etchSize}, 1fr)`;
+      let pixel = document.createElement('div');
+      pixel.classList.add("pixel");
+      container.appendChild(pixel);                                                
 
-
-let cellCreation = function(){
-
-let grid = etchSize * etchSize;
-
-for(i = 0; i < grid; ++i){
-    
-    let pixel = document.createElement('div');
-    pixel.classList.add("pixel");
-    pixel.setAttribute('id', "pixel");
-
-
-    container.appendChild(pixel);                                                
-
-    // changes color of background.
-    pixel.addEventListener('mouseover', function(){
-      pixel.style.background = 'pink';
-    });
+      // changes color of background.
+      pixel.addEventListener('mouseover', function(){
+        pixel.style.background = 'pink';
+      });
 
 
       let btn = document.querySelector('#reset');
@@ -34,8 +30,10 @@ for(i = 0; i < grid; ++i){
       pixel.style.background = 'white';
       });
 
-    
-
     }
-}
-window.addEventListener(onload, cellCreation());
+
+
+
+container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+//container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+window.addEventListener(onload, divGrid());
