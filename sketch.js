@@ -1,5 +1,5 @@
 
-let etchSize = 16;
+let etchSize = 100;
 
 
 
