@@ -1,6 +1,13 @@
 
-let etchSize = parseInt(prompt());
+let etchSize = 16;
 
+
+
+
+
+let container = document.querySelector('#container');
+container.style.gridTemplateColumns = `repeat(${etchSize}, 1fr)`;
+container.style.gridTemplateRows = `repeat(${etchSize}, 1fr)`;
 
 
 let cellCreation = function(){
@@ -8,15 +15,12 @@ let cellCreation = function(){
 let grid = etchSize * etchSize;
 
 for(i = 0; i < grid; ++i){
-
-    let container = document.querySelector('#container');
+    
     let pixel = document.createElement('div');
     pixel.classList.add("pixel");
     pixel.setAttribute('id', "pixel");
 
-    container.style.gridTemplateColumns = `repeat(${etchSize}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${etchSize}, 1fr)`;
-    
+
     container.appendChild(pixel);                                                
 
     // changes color of background.
