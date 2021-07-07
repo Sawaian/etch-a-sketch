@@ -33,6 +33,11 @@
     }
 
 
+   // let colorChange = () =>{
+    //  Math.floor(Math.random() * 16777215);
+   //   document.pixel.style.backgroundColor = colorChange;
+  //  }
+
 
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;

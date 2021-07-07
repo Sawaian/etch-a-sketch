@@ -1,6 +1,10 @@
     
 
-  
+     #rainbow{
+        display: block;
+        margin: auto;
+        
+    }
    
    .pixel{
         justify-self: stretch;
@@ -18,7 +22,9 @@
     }
 
     #reset{
+        display: block;
         border-radius: auto;
-        justify-content: center;
+        margin: auto;
     }
 
+ 
