@@ -8,7 +8,6 @@
    let gridSize = parseInt(16);
    let grid = gridSize * gridSize;
    let container = document.querySelector('#container');
-   let colorBtn = document.querySelector('#colorBtn');
    let etchColor = `pink`;
 
    
@@ -20,7 +19,7 @@
   
 
    function newGrid(){
-      gridSize = prompt();
+     gridSize = prompt();
       if (gridSize < 1 || gridSize > 100 || Number.isNaN(gridSize)){
       alert ('Choose a value between 1-100')
       newGrid();
@@ -53,11 +52,11 @@
       }
 
 
-      function colorChange(){
-        switch (etchColor){
-        case 'pink':
-          this.style.backgroundColor = 'pink';
-        case 'rainbow':
+  function colorChange(){
+    switch (etchColor){
+     case 'pink':
+      this.style.backgroundColor = 'pink';
+      case 'rainbow':
           this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
           break;
         }
