@@ -1,14 +1,44 @@
 
-   const gridSize = prompt();
+   
+   
+   let btn = document.querySelector('#reset');
+   btn.addEventListener('click', ()=> {
+    reset();
+    });
+   let gridSize = parseInt(16);
    let grid = gridSize * gridSize;
    let container = document.querySelector('#container');
+   let colorBtn = document.querySelector('#colorBtn');
    let etchColor = `pink`;
+
+   
+   function reset(){
+     resetGrid();
+     newGrid();
+     cellCreation();
+   }
   
-  
+
+   function newGrid(){
+      gridSize = prompt();
+      if (gridSize < 1 || gridSize > 100 || Number.isNaN(gridSize)){
+      alert ('Choose a value between 1-100')
+      newGrid();
+      }
+      else {
+        newGridSize(gridSize);
+      }
+    }
+
+    function newGridSize(){
+      grid = gridSize * gridSize;
+      return grid;
+    }
+ 
 
   let cellCreation = function(){
 
-    for(i = 0; i < grid; ++i){  
+      for(i = 0; i < grid; ++i){  
     
       let pixelContainer = document.createElement('div');
       pixelContainer.classList.add("pixel");
@@ -17,40 +47,31 @@
       let pixel = document.querySelectorAll('.pixel');
       pixel.forEach(pixel => pixel.addEventListener('mouseover', colorChange));
 
-     // let btn = document.querySelector('#reset');
-      //btn.addEventListener('click', ()=> {
-     // pixel.style.background = 'white';
-    //  });
-    }
+      container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+      container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+        } 
+      }
 
-      // changes color of background.
-    //  pixel.addEventListener('mouseover', function(event){
-      //  pixel.style.background = 'pink';
-      //});
-
-  //  let rainbowButton = document.querySelector('#rainbow');
-    //rainbowButton.addEventListener('click', () => {
-      //document.this.style.background = colorChange();
-      //console.log("Rainbow!")
-   // });
 
       function colorChange(){
         switch (etchColor){
         case 'pink':
           this.style.backgroundColor = 'pink';
-        console.log('mouse over works');
-
         case 'rainbow':
           this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        } 
+          break;
+        }
       }
-    }
-        //let colorChange = () =>{
-        //Math.floor(Math.random() * 16777215);
-        //document.this.style.backgroundColor = colorChange;
-        //}
-
+      
+  function resetGrid() {
+  const pixels = Array.from(container.childNodes);
+  pixels.forEach((element) => {
+    container.removeChild(element);
+  });
     
-container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+      
+    
+  }
+
+
 window.addEventListener(onload, cellCreation());
