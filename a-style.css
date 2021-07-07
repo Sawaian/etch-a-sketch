@@ -7,7 +7,7 @@
    
    .pixel{
         justify-self: stretch;
-        background-color: blue;
+        background-color: white;
 }
 
     #container {
@@ -16,7 +16,7 @@
         width: 25vw;
         height: 25vw;
         margin: auto;
-        border: 1px solid black;
+        border: 5px solid red;
         
     }
 
